@@ -4,6 +4,7 @@ const featuresList = [
     title: "Intuitive Task Creation",
     description:
       "Easily create and manage tasks with a simple and user-friendly interface.",
+    link: "portfolio.html",
   },
 
   {
@@ -11,6 +12,7 @@ const featuresList = [
     title: "Smart Reminders",
     description:
       "Set reminders to ensure you never miss an important deadline.",
+    link: "portfolio.html",
   },
 
   {
@@ -18,6 +20,7 @@ const featuresList = [
     title: "Collaboration Tools",
     description:
       "Collaborate with team members, assign tasks, and track progress together.",
+    link: "portfolio.html",
   },
 
   {
@@ -25,6 +28,7 @@ const featuresList = [
     title: "Progress Tracking",
     description:
       "Monitor your progress, track completed tasks, and stay motivated.",
+    link: "portfolio.html",
   },
 
   {
@@ -32,6 +36,7 @@ const featuresList = [
     title: "Deadline Management",
     description:
       "Set due dates and track deadlines to stay on top of your commitments.",
+    link: "portfolio.html",
   },
 
   {
@@ -39,6 +44,7 @@ const featuresList = [
     title: "File Attachments",
     description:
       "Attach files to tasks for seamless collaboration and easy access.",
+    link: "portfolio.html",
   },
 ];
 
@@ -82,7 +88,7 @@ const plans = [
       "contributions",
     ],
     price: "",
-    link: "https://www.linkedin.com/in/krish-sandhu-6778a2229/",
+    link: "https://www.linkedin.com/in/arnav-bhardwaj-448a21316/",
   },
 
   {
@@ -91,7 +97,7 @@ const plans = [
       "contributions",
     ],
     price: "",
-    link: "https://www.linkedin.com/in/krish-sandhu-6778a2229/",
+    link: "https://www.linkedin.com/in/shreya-yadav-918b01323/",
   },
 
   {
@@ -100,7 +106,7 @@ const plans = [
       "contributions",
     ],
     price: "",
-    link: "https://www.linkedin.com/in/krish-sandhu-6778a2229/",
+    link: "https://www.linkedin.com/in/ayush-pandey-9a3a4a2ba/",
   },
 ];
 
@@ -124,7 +130,8 @@ const displayFeatures = () => {
       <h3>${f.title}</h3>
       <p>
         ${f.description}
-      </p>`;
+      </p>
+      <a href="${f.link}" class="btn">Visit</a>`;
 
     const featureCard = document.createElement("div");
     featureCard.classList.add("feature-card");
