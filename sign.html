@@ -7,8 +7,11 @@
 
     <link rel="stylesheet" href="styles.css">
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>        <!--https://boxicons.com/ -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--https://boxicons.com/ -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script
+        src="https://www.google.com/recaptcha/enterprise.js?render=6Ld5_eEqAAAAAD6qZ7HUCNrjB-qd561JnJsk120v"></script>
+
     <title>Sign in / Sign up</title>
 </head>
 
@@ -61,8 +64,8 @@
                     <img src="images/namaste-religion-svgrepo-com.svg" alt="SVG Image" width="200" height="200" />
                     <br>
                     <br>
-                    
-                    
+
+
                     <h4>Already have an account ?</h4>
                     <button class="hidden" id="login">Login</button>
                 </div>
@@ -72,7 +75,7 @@
                     <img src="images/namaste-religion-svgrepo-com.svg" alt="SVG Image" width="200" height="200" />
                     <br>
                     <br>
-                    
+
                     <h4>Don't have an account ?</h4>
                     <button class="hidden" id="register">Register</button>
                 </div>
@@ -80,7 +83,24 @@
         </div>
     </div>
 
-    <script src="animate.js"></script>
+
+    <script>
+        window.onload = function () {
+            if (typeof grecaptcha !== "undefined") {
+                grecaptcha.enterprise.ready(async () => {
+                    try {
+                        const token = await grecaptcha.enterprise.execute('6Ld5_eEqAAAAAD6qZ7HUCNrjB-qd561JnJsk120v', { action: 'test_action' });
+                        console.log("reCAPTCHA Token:", token);
+                    } catch (error) {
+                        console.error("Error executing reCAPTCHA:", error);
+                    }
+                });
+            } else {
+                console.error("reCAPTCHA script did not load.");
+            }
+        };
+    </script>
+
 </body>
 
 </html>
