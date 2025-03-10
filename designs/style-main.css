@@ -208,8 +208,12 @@ section h2 {
 
 #features .content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 24px;
+}
+#features .feature-card:hover {
+  transform: translateY(-5px);
+  /* Hover effect */
 }
 
 #features .btn {
@@ -552,7 +556,7 @@ nav .menu-icon,
   /* Features section */
 
   #features .content {
-    grid-template-columns: 1fr;
+    grid-template-columns:  1fr;
   }
 
   /* Testimonials */
