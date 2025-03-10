@@ -1,74 +1,74 @@
 const featuresList = [
   {
-    icon: "images/create-task-icon.svg",
-    title: "Intuitive Task Creation",
-    description:
-      "Easily create and manage tasks with a simple and user-friendly interface.",
+    icon: "images/portfolio-svgrepo-com.svg",
+    title: "Portfolio Analyzer",
+    // description:
+    //   "AI-driven stock portfolio insights instantly.",
     link: "portfolio.html",
   },
 
   {
-    icon: "images/reminders-icon.svg",
-    title: "Smart Reminders",
-    description:
-      "Set reminders to ensure you never miss an important deadline.",
+    icon: "images/risk-assessment-svgrepo-com.svg",
+    title: "Risk Supervisor",
+    // description:
+    //   "Real-time risk assessment based on severity and duration.",
     link: "portfolio.html",
   },
 
   {
-    icon: "images/collaborations-icon.svg",
-    title: "Collaboration Tools",
-    description:
-      "Collaborate with team members, assign tasks, and track progress together.",
+    icon: "images/tax-svgrepo-com.svg",
+    title: "Tax Assistant",
+    // description:
+    //   "Real-time tax assessment based on income and duration.",
     link: "portfolio.html",
   },
 
   {
-    icon: "images/progress-icon.svg",
-    title: "Progress Tracking",
-    description:
-      "Monitor your progress, track completed tasks, and stay motivated.",
+    icon: "images/market-news-newspaper-svgrepo-com.svg",
+    title: "Market Updates",
+    // description:
+    //   "Fast, AI-powered Correct   real-time stock and Precise IPO updates.",
     link: "portfolio.html",
   },
 
   {
-    icon: "images/deadline-icon.svg",
-    title: "Deadline Management",
-    description:
-      "Set due dates and track deadlines to stay on top of your commitments.",
+    icon: "images/currency-exchange-svgrepo-com.svg",
+    title: "Currency Exchanger",
+    // description:
+    //   "Fast and real-time currency exchange calculator for accurate conversions.",
     link: "portfolio.html",
   },
 
-  {
-    icon: "images/file-icon.svg",
-    title: "File Attachments",
-    description:
-      "Attach files to tasks for seamless collaboration and easy access.",
-    link: "portfolio.html",
-  },
+  // {
+  //   icon: "images/file-icon.svg",
+  //   title: "File Attachments",
+  //   description:
+  //     "Attach files to tasks for seamless collaboration and easy access.",
+  //   link: "portfolio.html",
+  // },
 ];
 
 const testimonialsList = [
   {
     review:
-      "Since I started using the app, my productivity has skyrocketed. The reminder feature keeps me on track and ensures that I never miss an important task or deadline. Highly recommended!",
+      "Since I started using the Stockoverflow Website, my Profit has raise up. The Risk Assesment feature is very useful. Highly recommended!",
     image: "images/testimonial1.png",
     name: "John Smith",
-    designation: "Tech Lead, Amazon",
+    designation: "Groww, CEO",
   },
   {
     review:
-      "This app has completely changed the way I manage my tasks. The advanced features and intuitive interface make it a joy to use. I can't imagine my work life without it!",
+      "This Website has completely changed the way I Use to work with the stocks. The Portfolio analyzer Feature gives the accurate graph which is vey useful. I can't imagine my Portfolio without it!",
     image: "images/testimonial2.png",
     name: "Sarah Johnson",
-    designation: "Product Manager, Google",
+    designation: "Zerodha, CEO",
   },
   {
     review:
-      "I've tried several task management apps, but this one takes the cake. The customizable workflows and seamless collaboration features have greatly improved my team's efficiency.",
+      "I've tried several Websites like it, but this one takes the cake. The Tax assistant and the Currency Exchanger Feature is one eof the best in it",
     image: "images/testimonial3.png",
     name: "Emily Davis",
-    designation: "Project Manager, Microsoft",
+    designation: "Upstocks , CEO",
   },
 ];
 
@@ -124,14 +124,14 @@ let currentTestimonialIndex = 0;
 
 const displayFeatures = () => {
   featuresList.forEach((f) => {
-    const html = `<div class="icon">
-        <img src="${f.icon}" alt="" />
+    const html = `
+      
+      <a href="${f.link}">
+      <div class="icon">
+        <img src="${f.icon}" alt="img" height="65px" width="65px" />
       </div>
       <h3>${f.title}</h3>
-      <p>
-        ${f.description}
-      </p>
-      <a href="${f.link}" class="btn">Visit</a>`;
+      </a>`;
 
     const featureCard = document.createElement("div");
     featureCard.classList.add("feature-card");
