@@ -12,7 +12,7 @@ const featuresList = [
     title: "Risk Supervisor",
     // description:
     //   "Real-time risk assessment based on severity and duration.",
-    link: "portfolio.html",
+    link: "risk.html",
   },
 
   {
