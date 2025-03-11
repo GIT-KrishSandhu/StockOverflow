@@ -1,3 +1,0 @@
-# StockOverflow
-
-this is README
