@@ -36,7 +36,7 @@ const featuresList = [
     title: "Currency Exchanger",
     // description:
     //   "Fast and real-time currency exchange calculator for accurate conversions.",
-    link: "portfolio.html",
+    link: "Currency.html",
   },
 
   // {

@@ -1,0 +1,140 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: tahoma;
+} */
+
+:root {
+    --primary-color: #8300b6;
+    --main-color: rgb(17, 221, 153);
+}
+
+/* .navbar {
+    background-color: var(--primary-color) !important;
+    top: 12px;
+    backdrop-filter: blur(10px);
+    width: 1300px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 32px;
+    border-radius: 24px;
+    box-shadow: 0 4px 50px -8px rgba(0, 0, 0, 0.2);
+    z-index: 300;
+}
+
+body {
+    background: linear-gradient(90deg, #c2cefe 0%, #f7a3fe 100%);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: 500;
+}
+
+.logo-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.card {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: transform 0.2s;
+} */
+
+ img {
+    margin: 1em;
+    width: 20%;
+}
+
+h1 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--main-color);
+}
+
+p {
+    color: grey;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.container .currency {
+    margin: 1em;
+}
+
+.swap-container {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.rate {
+    color: var(--main-color);
+    font-size: 1.2em;
+}
+
+.currency {
+    text-align: center;
+}
+
+.currency select {
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+}
+
+.currency input {
+    padding: 15px 0;
+    width: 70%;
+    border: 0;
+    outline: none;
+    font-size: 2em;
+    text-align: right;
+}

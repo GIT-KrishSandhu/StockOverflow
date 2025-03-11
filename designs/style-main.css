@@ -25,11 +25,9 @@ a {
 nav {
   position: fixed;
   top: 30px;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.9) 0%,
-    rgba(255, 254, 254, 0.4) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 254, 254, 0.4) 100%);
   backdrop-filter: blur(10px);
   width: 900px;
   left: 50%;
@@ -45,7 +43,7 @@ nav {
 
 nav .logo {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   color: #8300b6;
 }
 
@@ -55,7 +53,7 @@ nav .nav-items {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 500px;
   margin-inline: auto;
 }
 
@@ -211,6 +209,7 @@ section h2 {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 24px;
 }
+
 #features .feature-card:hover {
   transform: translateY(-5px);
   /* Hover effect */
@@ -556,7 +555,7 @@ nav .menu-icon,
   /* Features section */
 
   #features .content {
-    grid-template-columns:  1fr;
+    grid-template-columns: 1fr;
   }
 
   /* Testimonials */
