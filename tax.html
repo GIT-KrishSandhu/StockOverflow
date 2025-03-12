@@ -1,8 +1,17 @@
-<!-- 
-<link rel="stylesheet" href="designs/style-tax.css">
-<link href="designs/burger.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
 
-<nav class="navbar navbar-expand-lg navbar-dark mb-4">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete Stock Tax Calculator & Education</title>
+    <link rel="stylesheet" href="designs/style-tax.css">
+    <link href="designs/burger.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark mb-4">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="images/stockoverflow logo.png" height="50px" width="50px">
@@ -17,19 +26,135 @@
                         <div class="bar3"></div>
                     </div>
                 </a>
-              
+
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
-                  <li><a class="dropdown-item" href="risk.html">Risk Assessment</a></li>
-                  <li><a class="dropdown-item" href="market.html">Market Updates</a></li>
-                  <li><a class="dropdown-item" href="tax.html">Tax Assistant</a></li>
-                  <li><a class="dropdown-item" href="currency.html">Currency Exchange</a></li>
+                    <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
+                    <li><a class="dropdown-item" href="risk.html">Risk Assessment</a></li>
+                    <li><a class="dropdown-item" href="market.html">Market Updates</a></li>
+                    <li><a class="dropdown-item" href="tax.html">Tax Assistant</a></li>
+                    <li><a class="dropdown-item" href="currency.html">Currency Exchange</a></li>
                 </ul>
             </div>
         </div>
-</nav>
+    </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-<script src="script/burger.js"></script>
-<script src="script/script-tax.js"></script>
--->
+    <!-- main part  -->
+    <div class="max-w-7xl mx-auto bg-white p-12 rounded-3xl shadow-2xl space-y-12 fade-in">
+
+        <h1 class="text-5xl font-bold text-center text-blue-700">📊 Indian Stock Tax Calculator & Education</h1>
+
+        <div class="flex justify-center space-x-4 mb-8">
+            <button onclick="showSection('calculator')" id="calculatorTab"
+                class="px-6 py-3 rounded-xl font-semibold btn-animate active-tab">🧮 Tax Calculator</button>
+            <button onclick="showSection('education')" id="educationTab"
+                class="px-6 py-3 rounded-xl font-semibold btn-animate">📚 Tax Education</button>
+        </div>
+
+        <div id="educationSection" class="hidden space-y-8">
+            <h2 class="text-3xl font-bold text-center text-blue-800">💡 Comprehensive Tax Education for Indian Investors
+                (2024-25)</h2>
+            <div class="space-y-6 text-lg leading-8">
+                <h3 class="text-2xl font-bold text-blue-600">📈 1. Short Term Capital Gains (STCG)</h3>
+                <p>Gains from sale of listed equity shares or equity mutual funds held for <b>less than 12 months</b>.
+                    Tax rate is <b>15%</b> (Section 111A) when Securities Transaction Tax (STT) is paid. Losses can be
+                    set off against other capital gains and carried forward for up to 8 years.</p>
+
+                <h3 class="text-2xl font-bold text-blue-600">📉 2. Long Term Capital Gains (LTCG)</h3>
+                <p>Gains from listed equity shares/mutual funds held for <b>more than 12 months</b>. Gains up to ₹1 lakh
+                    annually are tax-free; above that taxed at <b>10%</b> (Section 112A) without indexation benefit.
+                    Losses can be set off and carried forward for 8 years.</p>
+
+                <h3 class="text-2xl font-bold text-blue-600">🔄 3. Intraday Trading (Speculative Business Income)</h3>
+                <p>Buying and selling shares on the same day. Considered speculative income under Section 43(5), taxed
+                    as per normal slab rates (up to <b>30%</b>). Business expenses like brokerage, internet, advisory
+                    can be claimed.</p>
+
+                <h3 class="text-2xl font-bold text-blue-600">📊 4. Futures & Options (F&O Trading)</h3>
+                <p>Classified as <b>non-speculative business income</b>. Taxed as per individual slab rates. Allowed to
+                    deduct business expenses. Audit is required if turnover exceeds ₹10 crores or profit is less than 6%
+                    of turnover.</p>
+
+                <h3 class="text-2xl font-bold text-blue-600">💵 5. Dividends</h3>
+                <p>Dividend income from stocks and mutual funds is taxed as per slab rates. If annual dividend exceeds
+                    ₹5,000, companies deduct <b>10% TDS</b>. No exemption available from FY 2020-21 onwards.</p>
+
+                <h3 class="text-2xl font-bold text-blue-600">💸 6. Other Income</h3>
+                <p>Includes interest from savings, fixed deposits, rental income, and side business income. Taxed under
+                    respective heads at normal slab rates. Must be aggregated for final tax calculation.</p>
+
+                <h3 class="text-2xl font-bold text-green-700">⚙️ Key Tax Planning Tips:</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Losses must be reported in ITR to carry forward and set off.</li>
+                    <li>Business income (F&O/Intraday) should consider proper expense tracking.</li>
+                    <li>Investments in ELSS, PPF, NPS qualify for deductions under Section 80C and 80CCD.</li>
+                    <li>Dividend stripping and bonus stripping rules apply to avoid artificial losses.</li>
+                    <li>Tax audit and maintenance of books mandatory if trading turnover exceeds prescribed limits.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="calculatorSection" class="space-y-8">
+            <form id="taxForm" class="space-y-8">
+                <div class="grid grid-cols-2 gap-8">
+                    <label class="block fade-in"><span class="font-semibold">💰 STCG (Short Term Capital Gains)</span>
+                        <p class="text-sm text-gray-500 mb-1">Gains from selling stocks within 1 year. Taxed at 15%.</p>
+                        <input type="number" id="stcg" class="p-4 border-2 rounded-xl w-full mt-1" />
+                    </label>
+                    <label class="block fade-in"><span class="font-semibold">💰 LTCG (Long Term Capital Gains)</span>
+                        <p class="text-sm text-gray-500 mb-1">Gains from stocks held for more than 1 year. ₹1L exempt;
+                            excess taxed at 10%.</p>
+                        <input type="number" id="ltcg" class="p-4 border-2 rounded-xl w-full mt-1" />
+                    </label>
+                    <label class="block fade-in"><span class="font-semibold">📈 Intraday Income</span>
+                        <p class="text-sm text-gray-500 mb-1">Profits from buying & selling stocks on same day. Taxed as
+                            business income (30%).</p>
+                        <input type="number" id="intraday" class="p-4 border-2 rounded-xl w-full mt-1" />
+                    </label>
+                    <label class="block fade-in"><span class="font-semibold">📝 F&O Income (Futures & Options)</span>
+                        <p class="text-sm text-gray-500 mb-1">Profits from derivatives trading. Treated as business
+                            income, taxed at 30%.</p>
+                        <input type="number" id="fo" class="p-4 border-2 rounded-xl w-full mt-1" />
+                    </label>
+                    <label class="block fade-in"><span class="font-semibold">💵 Dividends</span>
+                        <p class="text-sm text-gray-500 mb-1">Earnings from company shares. Added to income and taxed as
+                            per your slab.</p>
+                        <input type="number" id="dividend" class="p-4 border-2 rounded-xl w-full mt-1" />
+                    </label>
+                    <label class="block fade-in"><span class="font-semibold">💸 Other Income</span>
+                        <p class="text-sm text-gray-500 mb-1">Any other earnings (interest, rental, etc.). Taxed as per
+                            your slab rate.</p>
+                        <input type="number" id="other" class="p-4 border-2 rounded-xl w-full mt-1" />
+                    </label>
+                </div>
+                <button type="button" onclick="calculateTax()"
+                    class="w-full bg-green-500 hover:bg-green-600 text-white p-5 rounded-2xl text-2xl font-bold btn-animate">✅
+                    Calculate Tax</button>
+            </form>
+
+            <div id="results" class="hidden p-6 bg-green-100 rounded-xl mt-4 space-y-6">
+                <h2 class="text-4xl font-bold text-center">🎉 Tax Summary</h2>
+                <div id="resultOutput" class="text-2xl font-semibold text-green-700 text-center"></div>
+
+                <div id="breakdown" class="text-lg space-y-2">
+                    <h3 class="text-2xl font-bold">📑 Tax Breakdown</h3>
+                    <ul id="breakdownList" class="list-disc pl-6"></ul>
+                </div>
+
+                <div class="h-64"><canvas id="taxChart"></canvas></div>
+
+                <button onclick="window.print()"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-xl font-bold btn-animate">🖨️
+                    Print Report</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- end here -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="script/burger.js"></script>
+    <script src="script/script-tax.js"></script>
+
+</body>
+
+</html>
