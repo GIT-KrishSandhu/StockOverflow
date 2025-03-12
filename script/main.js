@@ -12,21 +12,21 @@ const featuresList = [
   },
 
   {
-    icon: "images/tax-svgrepo-com.svg",
-    title: "Tax Assistant",
-    link: "portfolio.html",
+    icon: "images/market-news-newspaper-svgrepo-com.svg",
+    title: "Market Updates",
+    link: "market.html",
   },
 
   {
-    icon: "images/market-news-newspaper-svgrepo-com.svg",
-    title: "Market Updates",
-    link: "portfolio.html",
+    icon: "images/tax-svgrepo-com.svg",
+    title: "Tax Assistant",
+    link: "tax.html",
   },
 
   {
     icon: "images/currency-exchange-svgrepo-com.svg",
     title: "Currency Exchanger",
-    link: "Currency.html",
+    link: "currency.html",
   },
 ];
 
