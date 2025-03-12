@@ -2,50 +2,32 @@ const featuresList = [
   {
     icon: "images/portfolio-svgrepo-com.svg",
     title: "Portfolio Analyzer",
-    // description:
-    //   "AI-driven stock portfolio insights instantly.",
     link: "portfolio.html",
   },
 
   {
     icon: "images/risk-assessment-svgrepo-com.svg",
     title: "Risk Supervisor",
-    // description:
-    //   "Real-time risk assessment based on severity and duration.",
     link: "risk.html",
   },
 
   {
     icon: "images/tax-svgrepo-com.svg",
     title: "Tax Assistant",
-    // description:
-    //   "Real-time tax assessment based on income and duration.",
     link: "portfolio.html",
   },
 
   {
     icon: "images/market-news-newspaper-svgrepo-com.svg",
     title: "Market Updates",
-    // description:
-    //   "Fast, AI-powered Correct   real-time stock and Precise IPO updates.",
     link: "portfolio.html",
   },
 
   {
     icon: "images/currency-exchange-svgrepo-com.svg",
     title: "Currency Exchanger",
-    // description:
-    //   "Fast and real-time currency exchange calculator for accurate conversions.",
     link: "Currency.html",
   },
-
-  // {
-  //   icon: "images/file-icon.svg",
-  //   title: "File Attachments",
-  //   description:
-  //     "Attach files to tasks for seamless collaboration and easy access.",
-  //   link: "portfolio.html",
-  // },
 ];
 
 const testimonialsList = [
