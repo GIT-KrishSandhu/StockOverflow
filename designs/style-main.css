@@ -43,7 +43,7 @@ nav {
 
 nav .logo {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   color: #8300b6;
 }
 
@@ -53,7 +53,7 @@ nav .nav-items {
 }
 
 .container {
-  max-width: 500px;
+  max-width: 900px;
   margin-inline: auto;
 }
 
