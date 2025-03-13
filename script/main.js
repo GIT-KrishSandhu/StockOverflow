@@ -58,7 +58,7 @@ const plans = [
   {
     name: "Krish Sandhu",
     features: [
-      "contributions",
+      "Front-End Developer",
     ],
     price: "",
     link: "https://www.linkedin.com/in/krish-sandhu-6778a2229/",
@@ -67,7 +67,7 @@ const plans = [
   {
     name: "Arnav Bhardwaj",
     features: [
-      "contributions",
+      "Front-End Developer",
     ],
     price: "",
     link: "https://www.linkedin.com/in/arnav-bhardwaj-448a21316/",
@@ -76,7 +76,7 @@ const plans = [
   {
     name: "Shreya Yadav",
     features: [
-      "contributions",
+      "Back-End Developer",
     ],
     price: "",
     link: "https://www.linkedin.com/in/shreya-yadav-918b01323/",
@@ -85,7 +85,7 @@ const plans = [
   {
     name: "Ayush Pandey",
     features: [
-      "contributions",
+      "Back-End Developer",
     ],
     price: "",
     link: "https://www.linkedin.com/in/ayush-pandey-9a3a4a2ba/",
