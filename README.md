@@ -30,7 +30,7 @@ StockOverflow is a web-based platform designed to provide real-time market updat
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/StockOverflow.git
+   git clone https://github.com/GIT-KrishSandhu/StockOverflow.git
    ```
 2. Navigate to the project directory:
    ```sh
