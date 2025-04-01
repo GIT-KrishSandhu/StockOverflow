@@ -23,16 +23,16 @@ from stock_accounts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('admin/', admin.site.urls),
     path('', views.dashboard, name='dashboard'),
     path('accounts/', include("stock_accounts.urls")),
     path('currency/', include("stock_currency.urls")),
     path('market/', include("stock_market.urls")),
     path('portfolio/', include("stock_portfolio.urls")),
-    path('risk/', include("stock_risk.urls")),
-    path('tax/', include("stock_tax.urls")),
 ]
 
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
